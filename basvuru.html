@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hayalimdeki Çanakkale Kısa Film Yarışması Başvuru Formu">
+    <title>Başvuru Yap - Hayalimdeki Çanakkale</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C41E3A',
+                        secondary: '#1E3A8A',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-film text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white">Hayalimdeki Çanakkale</h1>
+                        <p class="text-xs text-gray-300">Kısa Film Yarışması</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-accent transition">Ana Sayfa</a>
+                    <a href="yarisma-detaylari.html" class="nav-link text-white hover:text-accent transition">Yarışma Detayları</a>
+                    <a href="galeri.html" class="nav-link text-white hover:text-accent transition">Galeri</a>
+                    <a href="iletisim.html" class="nav-link text-white hover:text-accent transition">İletişim</a>
+                    <a href="basvuru.html" class="btn-primary">
+                        <i class="fas fa-paper-plane mr-2"></i>Başvuru Yap
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-dark/95 backdrop-blur-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-white hover:text-accent transition py-2">Ana Sayfa</a>
+                <a href="yarisma-detaylari.html" class="text-white hover:text-accent transition py-2">Yarışma Detayları</a>
+                <a href="galeri.html" class="text-white hover:text-accent transition py-2">Galeri</a>
+                <a href="iletisim.html" class="text-white hover:text-accent transition py-2">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Başvuru Formu</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto">
+                    Hayalinizdeki Çanakkale hikayesini bizimle paylaşın
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                
+                <!-- Info Card -->
+                <div class="card mb-8" data-aos="fade-up">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle text-secondary text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Başvuru Öncesi Bilgilendirme</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li><i class="fas fa-check text-primary mr-2"></i>Filminizi YouTube'a yükleyip linkini paylaşmanız gerekmektedir</li>
+                                <li><i class="fas fa-check text-primary mr-2"></i>Film süresi maksimum 15 dakika olmalıdır</li>
+                                <li><i class="fas fa-check text-primary mr-2"></i>Çanakkale teması taşıyan özgün eserler kabul edilmektedir</li>
+                                <li><i class="fas fa-check text-primary mr-2"></i>Başvuru son tarihi: 31 Aralık 2025</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Form -->
+                <form id="application-form" class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-2xl font-semibold mb-6 text-dark">Başvuru Bilgileri</h2>
+                    
+                    <!-- Personal Information -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-700">Kişisel Bilgiler</h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="fullName">Ad Soyad</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                class="form-input" 
+                                placeholder="Adınız ve soyadınız"
+                            >
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="form-group">
+                                <label class="form-label form-label-required" for="email">E-posta</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="ornek@email.com"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label form-label-required" for="phone">Telefon</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    class="form-input" 
+                                    placeholder="05XX XXX XX XX"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Film Information -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-700">Film Bilgileri</h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="filmTitle">Film Adı</label>
+                            <input 
+                                type="text" 
+                                id="filmTitle" 
+                                name="filmTitle" 
+                                class="form-input" 
+                                placeholder="Filminizin adı"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="youtubeUrl">YouTube Video Linki</label>
+                            <input 
+                                type="url" 
+                                id="youtubeUrl" 
+                                name="youtubeUrl" 
+                                class="form-input" 
+                                placeholder="https://youtube.com/watch?v=..."
+                            >
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fas fa-lightbulb text-accent mr-1"></i>
+                                Filminizi YouTube'a "Listelenmemiş" olarak yükleyebilirsiniz
+                            </p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="filmDuration">Film Süresi (dakika)</label>
+                            <select id="filmDuration" name="filmDuration" class="form-select">
+                                <option value="">Seçiniz</option>
+                                <option value="1-5">1-5 dakika</option>
+                                <option value="6-10">6-10 dakika</option>
+                                <option value="11-15">11-15 dakika</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="filmDescription">Film Açıklaması</label>
+                            <textarea 
+                                id="filmDescription" 
+                                name="filmDescription" 
+                                class="form-textarea" 
+                                rows="6"
+                                maxlength="1000"
+                                placeholder="Filminizin konusunu, mesajını ve Çanakkale temasıyla ilişkisini anlatın..."
+                            ></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Category Selection -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-700">Kategori</h3>
+                        
+                        <div class="space-y-3">
+                            <label class="form-check-label cursor-pointer p-4 border-2 border-gray-200 rounded-lg hover:border-primary transition">
+                                <input type="radio" name="category" value="tarih" class="form-radio">
+                                <span class="ml-3">
+                                    <strong>Tarih</strong> - Çanakkale'nin tarihi ve destanları
+                                </span>
+                            </label>
+                            
+                            <label class="form-check-label cursor-pointer p-4 border-2 border-gray-200 rounded-lg hover:border-primary transition">
+                                <input type="radio" name="category" value="kultur" class="form-radio">
+                                <span class="ml-3">
+                                    <strong>Kültür</strong> - Çanakkale'nin kültürel zenginlikleri
+                                </span>
+                            </label>
+                            
+                            <label class="form-check-label cursor-pointer p-4 border-2 border-gray-200 rounded-lg hover:border-primary transition">
+                                <input type="radio" name="category" value="doga" class="form-radio">
+                                <span class="ml-3">
+                                    <strong>Doğa</strong> - Çanakkale'nin doğal güzellikleri
+                                </span>
+                            </label>
+                            
+                            <label class="form-check-label cursor-pointer p-4 border-2 border-gray-200 rounded-lg hover:border-primary transition">
+                                <input type="radio" name="category" value="diger" class="form-radio">
+                                <span class="ml-3">
+                                    <strong>Diğer</strong> - Serbest tema
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Terms and Conditions -->
+                    <div class="mb-8">
+                        <label class="form-check-label cursor-pointer">
+                            <input type="checkbox" name="agreeTerms" class="form-checkbox">
+                            <span class="ml-3">
+                                <a href="yarisma-detaylari.html#sartlar" class="text-primary hover:underline font-semibold">
+                                    Yarışma şartlarını
+                                </a> okudum ve kabul ediyorum
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary text-lg px-10 py-4">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Başvuruyu Gönder
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Hayalimdeki Çanakkale</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Çanakkale'nin ruhunu sinemaya taşıyan kısa film yarışması.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hızlı Linkler</h4>
+                    <ul class="space-y-2">
+                        <li><a href="yarisma-detaylari.html" class="text-gray-400 hover:text-accent transition">Yarışma Detayları</a></li>
+                        <li><a href="basvuru.html" class="text-gray-400 hover:text-accent transition">Başvuru</a></li>
+                        <li><a href="galeri.html" class="text-gray-400 hover:text-accent transition">Galeri</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-accent transition">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Bizi Takip Edin</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Hayalimdeki Çanakkale Kısa Film Yarışması. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
