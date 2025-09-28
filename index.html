@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hayalimdeki Çanakkale Kısa Film Yarışması - Çanakkale'nin ruhunu sinemaya taşıyın">
+    <meta name="keywords" content="çanakkale, kısa film, yarışma, sinema, film festivali">
+    <title>Hayalimdeki Çanakkale - Kısa Film Yarışması</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C41E3A',
+                        secondary: '#1E3A8A',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-film text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white">Hayalimdeki Çanakkale</h1>
+                        <p class="text-xs text-gray-300">Kısa Film Yarışması</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-accent transition">Ana Sayfa</a>
+                    <a href="yarisma-detaylari.html" class="nav-link text-white hover:text-accent transition">Yarışma Detayları</a>
+                    <a href="galeri.html" class="nav-link text-white hover:text-accent transition">Galeri</a>
+                    <a href="iletisim.html" class="nav-link text-white hover:text-accent transition">İletişim</a>
+                    <a href="basvuru.html" class="btn-primary">
+                        <i class="fas fa-paper-plane mr-2"></i>Başvuru Yap
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark/95 backdrop-blur-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-white hover:text-accent transition py-2">Ana Sayfa</a>
+                <a href="yarisma-detaylari.html" class="text-white hover:text-accent transition py-2">Yarışma Detayları</a>
+                <a href="galeri.html" class="text-white hover:text-accent transition py-2">Galeri</a>
+                <a href="iletisim.html" class="text-white hover:text-accent transition py-2">İletişim</a>
+                <a href="basvuru.html" class="btn-primary w-full text-center">
+                    <i class="fas fa-paper-plane mr-2"></i>Başvuru Yap
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 z-10"></div>
+        
+        <!-- Animated Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="container mx-auto px-6 relative z-20 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                    Hayalimdeki <span class="text-accent">Çanakkale</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                    Çanakkale'nin ruhunu, tarihini ve hikayelerini sinemaya taşıyın
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="basvuru.html" class="btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-video mr-2"></i>
+                        Hemen Başvur
+                    </a>
+                    <a href="yarisma-detaylari.html" class="btn-secondary text-lg px-8 py-4">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Detaylı Bilgi
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2" data-aos="fade-up" data-aos-delay="1000">
+                <a href="#about" class="text-white animate-bounce block">
+                    <i class="fas fa-chevron-down text-3xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title" data-aos="fade-up">Yarışma Hakkında</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="100">
+                    Hayalimdeki Çanakkale Kısa Film Yarışması, Çanakkale'nin zengin tarihini, kültürünü ve 
+                    coğrafyasını sinema sanatıyla buluşturmayı amaçlayan prestijli bir platformdur. 
+                    Genç sinemacıların yeteneklerini sergileyebileceği, yaratıcılığın sınır tanımadığı 
+                    bu yarışmada siz de Çanakkale'ye dair hikayenizi anlatın.
+                </p>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-5xl font-bold text-primary mb-2">50.000₺</div>
+                        <p class="text-gray-600">Toplam Ödül</p>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-5xl font-bold text-primary mb-2">15 dk</div>
+                        <p class="text-gray-600">Maksimum Süre</p>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-5xl font-bold text-primary mb-2">3</div>
+                        <p class="text-gray-600">Ödül Kategorisi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Neden Katılmalısınız?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Prestijli Ödüller</h3>
+                    <p class="text-gray-600">
+                        Değerli jüri üyelerimiz tarafından seçilen en iyi filmler 
+                        çeşitli kategorilerde ödüllendirilecek.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Networking</h3>
+                    <p class="text-gray-600">
+                        Sektörün önemli isimleriyle tanışma ve 
+                        iş birliği fırsatları yakalayın.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Geniş Gösterim</h3>
+                    <p class="text-gray-600">
+                        Filminiz gala gösteriminde ve dijital platformlarda 
+                        geniş kitlelere ulaşacak.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Sertifika</h3>
+                    <p class="text-gray-600">
+                        Tüm finalistler katılım sertifikası alacak, 
+                        kazananlar ödül sertifikası ile ödüllendirilecek.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Anlamlı Tema</h3>
+                    <p class="text-gray-600">
+                        Çanakkale'nin tarihi ve kültürel mirasını 
+                        sanat yoluyla yaşatma fırsatı.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Kariyer Fırsatı</h3>
+                    <p class="text-gray-600">
+                        Yeteneklerinizi sergileyerek sinema sektöründe 
+                        kariyer basamaklarını yükseltin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Önemli Tarihler</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-date">15 Ekim 2025</div>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-semibold mb-2">Başvuruların Başlaması</h3>
+                            <p class="text-gray-600">Yarışmacılar başvurularını yapmaya başlayabilir.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-date">31 Aralık 2025</div>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-semibold mb-2">Başvuru Son Tarihi</h3>
+                            <p class="text-gray-600">Başvuruların son gün ve saati.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-date">15 Ocak 2026</div>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-semibold mb-2">Finalist Açıklaması</h3>
+                            <p class="text-gray-600">Finale kalan filmler duyurulacak.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-date">18 Mart 2026</div>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-semibold mb-2">Gala ve Ödül Töreni</h3>
+                            <p class="text-gray-600">Çanakkale'de düzenlenecek muhteşem gala gecesi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="zoom-in">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">
+                    Hikayenizi Anlatmaya Hazır mısınız?
+                </h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Çanakkale'ye dair özgün hikayenizi sinemaya taşıyın, 
+                    yeteneklerinizi gösterin ve ödülleri kazanın!
+                </p>
+                <a href="basvuru.html" class="btn-accent text-lg px-10 py-4 inline-block">
+                    <i class="fas fa-video mr-2"></i>
+                    Şimdi Başvur
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Hayalimdeki Çanakkale</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Çanakkale'nin ruhunu sinemaya taşıyan kısa film yarışması.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hızlı Linkler</h4>
+                    <ul class="space-y-2">
+                        <li><a href="yarisma-detaylari.html" class="text-gray-400 hover:text-accent transition">Yarışma Detayları</a></li>
+                        <li><a href="basvuru.html" class="text-gray-400 hover:text-accent transition">Başvuru</a></li>
+                        <li><a href="galeri.html" class="text-gray-400 hover:text-accent transition">Galeri</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-accent transition">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Bizi Takip Edin</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Hayalimdeki Çanakkale Kısa Film Yarışması. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
