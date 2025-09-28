@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hayalimdeki Çanakkale Kısa Film Yarışması Detayları, Kurallar ve Ödüller">
+    <title>Yarışma Detayları - Hayalimdeki Çanakkale</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C41E3A',
+                        secondary: '#1E3A8A',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-film text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white">Hayalimdeki Çanakkale</h1>
+                        <p class="text-xs text-gray-300">Kısa Film Yarışması</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-accent transition">Ana Sayfa</a>
+                    <a href="yarisma-detaylari.html" class="nav-link text-white hover:text-accent transition">Yarışma Detayları</a>
+                    <a href="galeri.html" class="nav-link text-white hover:text-accent transition">Galeri</a>
+                    <a href="iletisim.html" class="nav-link text-white hover:text-accent transition">İletişim</a>
+                    <a href="basvuru.html" class="btn-primary">
+                        <i class="fas fa-paper-plane mr-2"></i>Başvuru Yap
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-dark/95 backdrop-blur-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-white hover:text-accent transition py-2">Ana Sayfa</a>
+                <a href="yarisma-detaylari.html" class="text-white hover:text-accent transition py-2">Yarışma Detayları</a>
+                <a href="galeri.html" class="text-white hover:text-accent transition py-2">Galeri</a>
+                <a href="iletisim.html" class="text-white hover:text-accent transition py-2">İletişim</a>
+                <a href="basvuru.html" class="btn-primary w-full text-center">Başvuru Yap</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Yarışma Detayları</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto">
+                    Kurallar, Kriterler ve Ödüller
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Ödüller</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="prize-card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="prize-card-rank">Birincilik Ödülü</div>
+                    <div class="prize-card-amount">25.000₺</div>
+                    <div class="prize-card-description">
+                        Plaket ve sertifika ile birlikte nakit ödül
+                    </div>
+                </div>
+                
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="prize-card-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="prize-card-rank">İkincilik Ödülü</div>
+                    <div class="prize-card-amount">15.000₺</div>
+                    <div class="prize-card-description">
+                        Plaket ve sertifika ile birlikte nakit ödül
+                    </div>
+                </div>
+                
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="prize-card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="prize-card-rank">Üçüncülük Ödülü</div>
+                    <div class="prize-card-amount">10.000₺</div>
+                    <div class="prize-card-description">
+                        Plaket ve sertifika ile birlikte nakit ödül
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="inline-block bg-accent/10 border-2 border-accent rounded-lg px-8 py-4">
+                    <p class="text-lg font-semibold text-dark">
+                        <i class="fas fa-star text-accent mr-2"></i>
+                        Jüri Özel Ödülü: Ek 5.000₺
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="sartlar" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Yarışma Kuralları</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-primary">1</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Tema ve Konu</h3>
+                                <p class="text-gray-600">
+                                    Filmler Çanakkale'nin tarihi, kültürü, doğası veya insanları ile ilgili olmalıdır. 
+                                    Özgün ve yaratıcı yaklaşımlar teşvik edilmektedir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-primary">2</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Süre</h3>
+                                <p class="text-gray-600">
+                                    Kısa filmler jenerik dahil <strong>maksimum 15 dakika</strong> olmalıdır. 
+                                    Minimum süre sınırı yoktur.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-primary">3</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Teknik Şartlar</h3>
+                                <p class="text-gray-600">
+                                    Filmler HD kalitede (minimum 720p) çekilmiş olmalıdır. 
+                                    Tüm teknik formatlar (kurmaca, belgesel, animasyon, deneysel) kabul edilir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-primary">4</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Katılım Koşulları</h3>
+                                <p class="text-gray-600">
+                                    Yarışmaya katılım ücretsizdir. 18 yaş ve üzeri herkes başvurabilir. 
+                                    Ekip çalışmaları kabul edilir. Her katılımcı en fazla 2 film ile başvurabilir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-primary">5</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Telif Hakları</h3>
+                                <p class="text-gray-600">
+                                    Filmlerde kullanılan tüm görsel, işitsel materyaller ve müzikler için 
+                                    gerekli telif hakları katılımcıya aittir. Katılımcı bu konuda sorumluluk sahibidir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-primary">6</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Değerlendirme</h3>
+                                <p class="text-gray-600">
+                                    Filmler senaryo, görüntü yönetimi, kurgu, özgünlük, tema uygunluğu 
+                                    ve genel etki açısından değerlendirilecektir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="zoom-in">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">
+                    Başvurmaya Hazır mısınız?
+                </h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Çanakkale'nin ruhunu sinemaya taşıyın ve ödülleri kazanın!
+                </p>
+                <a href="basvuru.html" class="btn-accent text-lg px-10 py-4 inline-block">
+                    <i class="fas fa-video mr-2"></i>
+                    Hemen Başvur
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Hayalimdeki Çanakkale</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Çanakkale'nin ruhunu sinemaya taşıyan kısa film yarışması.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hızlı Linkler</h4>
+                    <ul class="space-y-2">
+                        <li><a href="yarisma-detaylari.html" class="text-gray-400 hover:text-accent transition">Yarışma Detayları</a></li>
+                        <li><a href="basvuru.html" class="text-gray-400 hover:text-accent transition">Başvuru</a></li>
+                        <li><a href="galeri.html" class="text-gray-400 hover:text-accent transition">Galeri</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-accent transition">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Bizi Takip Edin</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Hayalimdeki Çanakkale Kısa Film Yarışması. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
