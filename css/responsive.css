@@ -1,0 +1,475 @@
+/**
+ * Hayalimdeki Çanakkale - Kısa Film Yarışması
+ * Responsive Tasarım
+ */
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+    
+    .hero-section h1 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 1279px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (max-width: 1023px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.125rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 60px;
+    }
+    
+    .timeline-date {
+        flex: none;
+        text-align: left;
+        padding-right: 0;
+        padding-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .timeline-content {
+        flex: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .timeline-content::before {
+        left: -40px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-date {
+        order: 0;
+        text-align: left;
+        padding-left: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-right: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -40px;
+        right: auto;
+    }
+    
+    .grid {
+        gap: 1.5rem;
+    }
+    
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    #navbar .container {
+        padding: 1rem;
+    }
+    
+    .hero-section {
+        height: 100vh;
+        min-height: 600px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-section .btn-primary,
+    .hero-section .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .stat-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-card div:first-child {
+        font-size: 3rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .timeline {
+        padding: 1rem 0;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-date {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.125rem;
+    }
+    
+    .timeline-content::before {
+        left: -30px;
+        width: 15px;
+        height: 15px;
+        border-width: 3px;
+    }
+    
+    .prize-card {
+        padding: 1.5rem;
+    }
+    
+    .prize-card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .prize-card-amount {
+        font-size: 2rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-accent,
+    .btn-outline {
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 16px;
+    }
+    
+    .modal {
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1rem;
+    }
+    
+    .modal-title {
+        font-size: 1.25rem;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn-primary,
+    .modal-footer .btn-secondary {
+        width: 100%;
+    }
+    
+    footer .grid {
+        gap: 2rem;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .video-container {
+        border-radius: var(--radius-md);
+    }
+    
+    #scrollTopBtn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 0.875rem;
+    }
+    
+    .stat-card div:first-child {
+        font-size: 2.5rem;
+    }
+    
+    .stat-card p {
+        font-size: 0.875rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .feature-card p {
+        font-size: 0.875rem;
+    }
+    
+    .prize-card-amount {
+        font-size: 1.75rem;
+    }
+    
+    .prize-card-rank,
+    .prize-card-description {
+        font-size: 0.875rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-accent,
+    .btn-outline {
+        font-size: 0.875rem;
+        padding: 0.75rem 1.25rem;
+    }
+    
+    #navbar h1 {
+        font-size: 1rem;
+    }
+    
+    #navbar p {
+        font-size: 0.625rem;
+    }
+    
+    #navbar .w-12 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 500px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section p {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-section .btn-primary,
+    .hero-section .btn-secondary {
+        padding: 0.625rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    #navbar {
+        padding: 0.5rem 0;
+    }
+}
+
+@media print {
+    nav,
+    #mobile-menu,
+    .btn-primary,
+    .btn-secondary,
+    .btn-accent,
+    footer,
+    #scrollTopBtn {
+        display: none !important;
+    }
+    
+    * {
+        background: white !important;
+        color: black !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    .card,
+    .feature-card,
+    .prize-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .animate-bounce,
+    .animate-pulse,
+    .animate-float {
+        animation: none !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-accent {
+        border: 2px solid currentColor;
+    }
+    
+    .card,
+    .feature-card,
+    .prize-card {
+        border: 2px solid currentColor;
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        border-width: 2px;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .feature-icon,
+    .prize-card-icon {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
